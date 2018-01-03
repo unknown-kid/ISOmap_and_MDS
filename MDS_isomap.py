@@ -44,7 +44,7 @@ def inner(m):
 	return b
 #定义MDS函数
 def MDS(data,n=2):
-	#先通过函数计算两矩阵的距离
+	#先通过函数计算矩阵的距离
 	m=metrics.pairwise.pairwise_distances(data,data)
 	#计算距离的内积矩阵
 	b=inner(m)
@@ -89,7 +89,7 @@ if __name__=='__main__':
 	#定义画布和画布的大小
 	figure=plt.figure(figsize=(15, 8))
 	#设置大标题
-	plt.suptitle('ISOMAP COMPARE TO MDS')
+	plt.suptitle('ISOMAP AND MDS COMPARE TO ORIGINAL DATA')
 	#定义下面散点图的位置2*2的画布中第1个位置
 	plt.subplot(2,2,1)
 	#设置小标题
